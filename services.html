@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services | Deptron Robotics</title>
+    <meta name="description"
+        content="Deptron Robotics services: Autonomous warehouse robots, voice assistant technology, rental models, and technical service solutions.">
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Orbitron:wght@400;700;900&display=swap"
+        rel="stylesheet">
+
+    <style>
+        /* Page Specific Styles */
+
+        .page-hero {
+            padding-top: 120px;
+            padding-bottom: 60px;
+            text-align: center;
+        }
+
+        .page-hero h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 3rem;
+            margin-bottom: 20px;
+            background: linear-gradient(90deg, #fff, var(--primary-color, #00d4ff));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 1200px) {
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .service-card {
+            padding: 40px 30px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0, 212, 255, 0.1);
+            border-color: rgba(0, 212, 255, 0.3);
+        }
+
+        .service-icon {
+            font-size: 2.5rem;
+            color: #00d4ff;
+            margin-bottom: 25px;
+        }
+
+        .service-card h3 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #fff;
+        }
+
+        .service-card p {
+            font-family: 'Inter', sans-serif;
+            color: #ccc;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+        }
+
+        .feature-list {
+            list-style: none;
+            padding: 0;
+            margin-top: auto;
+        }
+
+        .feature-list li {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            color: #a0a0a0;
+            font-size: 0.9rem;
+        }
+
+        .feature-list li i {
+            color: #00d4ff;
+            margin-right: 10px;
+            font-size: 0.8rem;
+        }
+
+        .cta-section {
+            text-align: center;
+            margin-top: 80px;
+            margin-bottom: 40px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index_en.html" class="logo">
+                <img src="assets/logo.svg" alt="Deptron Logo">
+                Deptron Robotics
+            </a>
+            <ul class="nav-links">
+                <li><a href="index_en.html">HOME</a></li>
+                <li><a href="solutions.html">SOLUTIONS</a></li>
+                <li><a href="services.html" class="active" style="color: #00d4ff;">SERVICES</a></li>
+                <li><a href="press.html">PRESS</a></li>
+                <li><a href="blog_en.html">BLOG</a></li>
+                <li><a href="about.html">ABOUT US</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+                <li class="lang-switch"><a href="hizmetlerimiz.html"
+                        style="color: var(--primary-color); font-weight: 700;">TR</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <section class="section page-hero">
+        <div class="container">
+            <h1>Our Services</h1>
+            <p style="max-width: 700px; margin: 0 auto; color: #aaa;">
+                Domestic autonomous solutions and flexible business models that provide up to 35% efficiency increase in
+                your warehouse operations.
+            </p>
+        </div>
+    </section>
+
+    <section class="section" style="padding-top: 0;">
+        <div class="container">
+            <div class="services-grid">
+
+                <div class="service-card glass-card">
+                    <div class="service-icon"><i class="fas fa-robot"></i></div>
+                    <h3>Autonomous Warehouse Robot</h3>
+                    <p>Lighten your heavy loads. High-capacity and modular autonomous mobile robots (AMR) developed for
+                        warehouse and production facilities.</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> 0 - 1500 kg Load Capacity</li>
+                        <li><i class="fas fa-check"></i> Domestic Production Hardware</li>
+                        <li><i class="fas fa-check"></i> ROS2 Based Autonomy</li>
+                    </ul>
+                </div>
+
+                <div class="service-card glass-card">
+                    <div class="service-icon"><i class="fas fa-microphone-lines"></i></div>
+                    <h3>Voice Assistant Technology</h3>
+                    <p>Talk to your robots. With our voice command technology that distinguishes us from competitors,
+                        your operators can give work orders with their voice instead of complex panels.</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> Voice Process Management</li>
+                        <li><i class="fas fa-check"></i> Operational Error Prevention</li>
+                        <li><i class="fas fa-check"></i> Fast Training and Adaptation</li>
+                    </ul>
+                </div>
+
+                <div class="service-card glass-card">
+                    <div class="service-icon"><i class="fas fa-file-contract"></i></div>
+                    <h3>Rental & SaaS</h3>
+                    <p>Don't get stuck with high investment costs. Establish your robotic fleet immediately with rental
+                        or annual subscription models.</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> Low Initial Investment (CAPEX)</li>
+                        <li><i class="fas fa-check"></i> Annual SaaS Subscriptions</li>
+                        <li><i class="fas fa-check"></i> Flexible Fleet Management</li>
+                    </ul>
+                </div>
+
+                <div class="service-card glass-card">
+                    <div class="service-icon"><i class="fas fa-network-wired"></i></div>
+                    <h3>Integration & Service</h3>
+                    <p>Don't change your existing system, transform it. We work fully compatible with your ERP and WMS
+                        software and offer 24/7 support.</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> WMS & ERP Compatibility</li>
+                        <li><i class="fas fa-check"></i> On-site Technical Service</li>
+                        <li><i class="fas fa-check"></i> Remote Fleet Tracking</li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="cta-section">
+                <h3 style="font-family: 'Orbitron'; margin-bottom: 20px;">Ready to Transform Your Warehouse?</h3>
+                <a href="contact.html" class="btn btn-primary"
+                    style="padding: 12px 30px; text-decoration: none; display: inline-block; background: #00d4ff; color: #000; font-weight: bold; border-radius: 5px;">Get
+                    a Quote</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-content" style="text-align: center; padding: 20px;">
+            <p>&copy; 2025 Deptron Robotics. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

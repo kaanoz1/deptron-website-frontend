@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deptron Robotics | Future Warehouse Solutions</title>
+    <meta name="description"
+        content="Deptron Robotics: Autonomous warehouse robots powered by ROS2, SLAM, and AI. 35% efficiency increase and industrial reliability.">
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Orbitron:wght@400;700;900&display=swap"
+        rel="stylesheet">
+
+    <style>
+        /* --- PAGE SPECIFIC STYLES --- */
+
+        /* 1. Hero Title Settings */
+        .page-hero {
+            padding-top: 120px;
+            padding-bottom: 60px;
+            text-align: center;
+            background: radial-gradient(circle at center, rgba(0, 212, 255, 0.05) 0%, transparent 70%);
+        }
+
+        .page-hero h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 3rem;
+            margin-bottom: 20px;
+            background: linear-gradient(90deg, #fff, #00d4ff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* 2. Glass Card General Setting */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            padding: 30px;
+            transition: all 0.3s ease;
+        }
+
+        .glass-card:hover {
+            transform: translateY(-5px);
+            border-color: #00d4ff;
+            box-shadow: 0 0 25px rgba(0, 212, 255, 0.1);
+        }
+
+        /* 3. Stats Banner */
+        .stats-banner {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            padding: 40px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            background: linear-gradient(90deg, rgba(10, 10, 18, 0) 0%, rgba(0, 212, 255, 0.05) 50%, rgba(10, 10, 18, 0) 100%);
+            margin-bottom: 60px;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 15px;
+            flex: 1 1 200px;
+        }
+
+        .stat-number {
+            font-family: 'Orbitron';
+            font-size: 2.2rem;
+            color: #00d4ff;
+            font-weight: 700;
+            display: block;
+            margin-bottom: 5px;
+            text-shadow: 0 0 15px rgba(0, 212, 255, 0.4);
+        }
+
+        .stat-label {
+            font-family: 'Inter';
+            color: #ccc;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        /* 4. TEAM CARDS */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 20px;
+            width: 100%;
+            margin-top: 50px;
+            align-items: stretch;
+        }
+
+        .team-card {
+            background-color: #0b0d12;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 16px;
+            padding: 30px 15px;
+            text-align: center;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+        }
+
+        .team-card:hover {
+            transform: translateY(-5px);
+            border-color: #00d4ff;
+            box-shadow: 0 0 25px rgba(0, 212, 255, 0.15);
+        }
+
+        .team-photo-wrapper {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            padding: 4px;
+            border: 2px solid #00d4ff;
+            box-shadow: 0 0 15px rgba(0, 212, 255, 0.2);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .team-img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            background-color: #1a1a1a;
+        }
+
+        .team-name {
+            font-family: 'Inter', sans-serif;
+            color: #fff;
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .team-role {
+            font-family: 'Orbitron', sans-serif;
+            color: #00d4ff;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+        }
+
+        .team-bio {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.8rem;
+            color: #888;
+            line-height: 1.4;
+        }
+
+        /* 5. REFERENCES */
+        .references-section {
+            padding: 60px 0;
+            background-color: #050505;
+            overflow: hidden;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .references-header h3 {
+            text-align: center;
+            font-family: 'Orbitron';
+            color: #fff;
+            opacity: 0.7;
+            letter-spacing: 2px;
+            margin-bottom: 40px;
+        }
+
+        .slider {
+            width: 100%;
+            height: 140px;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        .slide-track {
+            display: flex;
+            width: calc(250px * 12);
+            animation: scroll 25s linear infinite;
+        }
+
+        .slide {
+            width: 250px;
+            height: 100px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 0 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .slide:hover {
+            filter: drop-shadow(0 0 15px #00d4ff);
+            transform: scale(1.05);
+            cursor: pointer;
+        }
+
+        .slide img {
+            max-width: 140px;
+            max-height: 80px;
+            margin-bottom: 10px;
+            filter: grayscale(100%) brightness(200%);
+            transition: 0.3s;
+            opacity: 0.6;
+        }
+
+        .slide:hover img {
+            filter: grayscale(0%) brightness(100%);
+            opacity: 1;
+        }
+
+        .slide span {
+            font-family: 'Inter';
+            font-size: 0.9rem;
+            color: #fff;
+            opacity: 0.5;
+            transition: 0.3s;
+        }
+
+        .slide:hover span {
+            opacity: 1;
+            color: #00d4ff;
+        }
+
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(calc(-250px * 6));
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .team-grid {
+                grid-template-columns: repeat(3, 1fr);
+                justify-content: center;
+            }
+
+            .team-grid> :nth-last-child(-n+2) {
+                grid-column: span 1;
+            }
+        }
+
+        @media (max-width: 900px) {
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-visual {
+                width: 100%;
+                min-height: 300px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .team-grid {
+                grid-template-columns: 1fr;
+                padding: 0 20px;
+            }
+
+            .stats-banner {
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index_en.html" class="logo">
+                <img src="assets/logo.svg" alt="Deptron Logo">
+                Deptron Robotics
+            </a>
+            <ul class="nav-links">
+                <li><a href="index_en.html" class="active" style="color: #00d4ff;">HOME</a></li>
+                <li><a href="solutions.html">SOLUTIONS</a></li>
+                <li><a href="services.html">SERVICES</a></li>
+                <li><a href="press.html">PRESS</a></li>
+                <li><a href="blog_en.html">BLOG</a></li>
+                <li><a href="about.html">ABOUT US</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+                <li class="lang-switch"><a href="index.html"
+                        style="color: var(--primary-color); font-weight: 700;">TR</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <section id="hero" class="hero">
+        <div class="hero-bg"></div>
+        <div class="container hero-content">
+            <img src="assets/logo.svg" alt="Deptron Logo" class="hero-main-logo">
+            <h1 class="glitch" data-text="Not Just Robotics.">Not Just Robotics.</h1>
+            <h2 class="sub-headline">It's <span class="gradient-text">Deptron</span>.</h2>
+            <p class="hero-desc">
+                Autonomous logistics solutions born in Turkey, competing in the global market.
+                Achieve 35% efficiency increase in your warehouse with AI and voice assistant technology.
+            </p>
+            <div class="hero-buttons">
+                <a href="solutions.html" class="btn btn-primary">Discover Technology</a>
+                <a href="contact.html" class="btn btn-outline">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="stats-banner">
+        <div class="container" style="display:flex; width:100%; justify-content:space-around; flex-wrap:wrap;">
+            <div class="stat-item">
+                <span class="stat-number">%35</span>
+                <span class="stat-label">Efficiency Increase</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">1500 kg</span>
+                <span class="stat-label">Payload Capacity</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">%100</span>
+                <span class="stat-label">Domestic Software & Design</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">7/24</span>
+                <span class="stat-label">Uninterrupted Operation</span>
+            </div>
+        </div>
+    </div>
+
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">About Us</h2>
+            <div class="about-grid">
+                <div class="about-text glass-card">
+                    <p>Deptron Robotics is a technology startup that set out to revolutionize warehouse logistics.
+                    </p>
+                    <br>
+                    <p>Our vision is to become a logistics robot brand born in Turkey and competing in the global
+                        market.
+                        We aim to provide efficiency, safety, and cost advantages in warehousing and production.
+                    </p>
+                </div>
+                <div class="about-visual glass-card" style="padding:0 !important; overflow:hidden;">
+                    <img src="assets/nova.jpeg" alt="Deptron V1.0 Nova Robot" class="about-robot-image"
+                        style="width:100%; height:100%; object-fit:cover; border-radius:12px;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="section">
+        <div class="container">
+            <h2 class="section-title">Our Achievements & Difference</h2>
+            <div class="features-grid">
+                <div class="feature-card glass-card">
+                    <div class="icon"><i class="fas fa-trophy" style="color:#ffd700;"></i></div>
+                    <h3>European Championship</h3>
+                    <p>1st place award and "Best Hardware Hack" title at Portugal Shift Appens Hackathon.</p>
+                </div>
+                <div class="feature-card glass-card">
+                    <div class="icon"><i class="fas fa-medal" style="color:#c0c0c0;"></i></div>
+                    <h3>Teknofest Finalist</h3>
+                    <p>We proved our success as a finalist in the Digital Technologies in Industry competition.</p>
+                </div>
+                <div class="feature-card glass-card">
+                    <div class="icon"><i class="fas fa-microphone-lines" style="color: #00d4ff;"></i></div>
+                    <h3>Voice Assistant</h3>
+                    <p>Feature that distinguishes us from competitors: Talk to your robots. Give commands in natural
+                        language, manage the operation.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Founder and Core Team</h2>
+            <div class="team-grid">
+
+                <a href="https://tr.linkedin.com/in/meryemkoc" target="_blank" class="glass-card team-card">
+                    <div class="team-photo">
+                        <img src="assets/meryem.jpg" alt="Meryem Koç">
+                    </div>
+                    <h3>Meryem Koç</h3>
+                    <span class="role">Founder</span>
+                    <p class="bio">Information Systems Eng.<br>ROS2, Autonomy, AI</p>
+                </a>
+
+                <a href="https://www.linkedin.com/in/serhat-saygi/" target="_blank" class="glass-card team-card">
+                    <div class="team-photo">
+                        <img src="assets/serhat.jpg" alt="Serhat Saygı">
+                    </div>
+                    <h3>Serhat Saygı</h3>
+                    <span class="role">Core Team</span>
+                    <p class="bio">Mechatronics Eng.<br>Embedded Software, Hardware Integration</p>
+                </a>
+
+                <a href="https://tr.linkedin.com/in/gulsah-kutlu" target="_blank" class="glass-card team-card">
+                    <div class="team-photo">
+                        <img src="assets/gulsah.jpg" alt="Gülşah Keskin">
+                    </div>
+                    <h3>Gülşah Keskin</h3>
+                    <span class="role">Core Team</span>
+                    <p class="bio">Mechatronics Eng.<br>Mechanical Design, Electrical Integration</p>
+                </a>
+
+                <a href="https://tr.linkedin.com/in/recepdoğan" target="_blank" class="glass-card team-card">
+                    <div class="team-photo">
+                        <img src="assets/recep.jpg" alt="Recep Doğan">
+                    </div>
+                    <h3>Recep Doğan</h3>
+                    <span class="role">Core Team</span>
+                    <p class="bio">Chemical Eng. Candidate<br>Marketing, Finance, Sales Engineering</p>
+                </a>
+
+                <a href="https://tr.linkedin.com/in/muhammed-burak-oflaz-509115292" target="_blank"
+                    class="glass-card team-card">
+                    <div class="team-photo">
+                        <img src="assets/burak.jpg" alt="Burak Oflaz">
+                    </div>
+                    <h3>Burak Oflaz</h3>
+                    <span class="role">Core Team</span>
+                    <p class="bio">Mechatronics Eng. Candidate<br>Mechanical Design, Manufacturing</p>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="references-section">
+        <div class="container">
+            <div class="references-header">
+                <h3>REFERENCES & COLLABORATIONS</h3>
+            </div>
+
+            <div class="slider">
+                <div class="slide-track">
+
+                    <div class="slide"><img src="assets/ytu_logo.png" alt="YTU"><span>Yildiz Technical University</span>
+                    </div>
+                    <div class="slide"><img src="assets/sick_logo.png" alt="Sick"><span>Sensor Intelligence</span></div>
+                    <div class="slide"><img src="assets/eclipse_foundation_logo.png" alt="Eclipse"><span>Eclipse</span>
+                    </div>
+
+                    <div class="slide"><img src="assets/ytu_logo.png" alt="YTU"><span>Yildiz Technical University</span>
+                    </div>
+                    <div class="slide"><img src="assets/sick_logo.png" alt="Sick"><span>Sensor Intelligence</span></div>
+                    <div class="slide"><img src="assets/eclipse_foundation_logo.png" alt="Eclipse"><span>Eclipse</span>
+                    </div>
+
+                    <div class="slide"><img src="assets/ytu_logo.png" alt="YTU"><span>Yildiz Technical University</span>
+                    </div>
+                    <div class="slide"><img src="assets/sick_logo.png" alt="Sick"><span>Sensor Intelligence</span></div>
+                    <div class="slide"><img src="assets/eclipse_foundation_logo.png" alt="Eclipse"><span>Eclipse</span>
+                    </div>
+
+                    <div class="slide"><img src="assets/ytu_logo.png" alt="YTU"><span>Yildiz Technical University</span>
+                    </div>
+                    <div class="slide"><img src="assets/sick_logo.png" alt="Sick"><span>Sensor Intelligence</span></div>
+                    <div class="slide"><img src="assets/eclipse_foundation_logo.png" alt="Eclipse"><span>Eclipse</span>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title">Contact Us</h2>
+            <div class="contact-wrapper glass-card">
+                <p>Take the first step to make your warehouse autonomous</p>
+                <div class="contact-info">
+                    <a href="mailto:info@deptronrobotics.com" class="contact-link">info@deptronrobotics.com</a>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/company/deptron" target="_blank"><i
+                                class="fab fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com/deptron_robotics/" target="_blank"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="https://x.com/DeptronRobotics" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://github.com/deptronrobotics/" target="_blank"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-content">
+            <p>&copy; 2025 Deptron Robotics. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lidar and SLAM Technology | Deptron Robotics</title>
+    <meta name="description"
+        content="The eyes and brain of Deptron robots: Centimeter-level navigation in GPS-denied environments with Lidar sensors and SLAM algorithms.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Orbitron:wght@400;700;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index_en.html" class="logo">
+                <img src="assets/logo.svg" alt="Deptron Logo">
+                Deptron Robotics
+            </a>
+            <ul class="nav-links">
+                <li><a href="index_en.html">HOME</a></li>
+                <li><a href="solutions.html">SOLUTIONS</a></li>
+                <li><a href="services.html">SERVICES</a></li>
+                <li><a href="press.html">PRESS</a></li>
+                <li><a href="blog_en.html" class="active" style="color: #00d4ff;">BLOG</a></li>
+                <li><a href="about.html">ABOUT US</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+                <li class="lang-switch"><a href="blog-slam.html"
+                        style="color: var(--primary-color); font-weight: 700;">TR</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <section class="section blog-detail-section">
+        <div class="container">
+            <article class="blog-detail-card glass-card">
+
+                <div class="blog-detail-image">
+                    <img src="assets/blog-2.jpg"
+                        onerror="this.src='https://placehold.co/900x400/1a1a2e/00fff2?text=Lidar+SLAM+Mapping'"
+                        alt="Lidar SLAM Mapping">
+                </div>
+
+                <div class="blog-detail-content">
+                    <div class="blog-meta">
+                        <span class="date">November 15, 2025</span>
+                        <span class="category">R&D & Technology</span>
+                    </div>
+
+                    <h1 class="entry-title">Precise Mapping with SLAM Algorithms</h1>
+
+                    <div class="entry-body">
+                        <p class="lead">
+                            GPS signals are non-functional in indoor warehouse areas. So, how does a robot know where it
+                            is and where to go? The answer: The perfect harmony of Lidar and SLAM technology.
+                        </p>
+
+                        <h2>Finding Direction in the Dark: What is SLAM?</h2>
+                        <p>
+                            SLAM (Simultaneous Localization and Mapping) solves the most fundamental problem of
+                            autonomous robots: <em>"I am in an environment whose map I do not know; I must both create
+                                the map and know where I am on this map."</em>
+                        </p>
+                        <p>
+                            The algorithms we develop as Deptron engineers enable the robot to scan its surroundings as
+                            soon as it enters an unknown environment and create a dynamic map in its memory. Thanks to
+                            this, our robots start moving autonomously within minutes even in a warehouse they have
+                            never seen before.
+                        </p>
+
+                        <h3>Lidar: The Robot's Eyes</h3>
+                        <p>
+                            To perform this mapping, the robot needs to "see" its surroundings. This is where
+                            <strong>Lidar (Light Detection and Ranging)</strong> sensors come into play.
+                        </p>
+                        <ul class="feature-list">
+                            <li><strong>Laser Pulses:</strong> Lidar sends thousands of laser pulses per second and
+                                measures the time it takes for this light to hit objects and return.</li>
+                            <li><strong>Point Cloud:</strong> These measurements combine to create a detailed 3D "point
+                                cloud" map of the environment.</li>
+                            <li><strong>Dynamic Detection:</strong> Our Lidar sensors instantly detect moving people or
+                                other forklifts, triggering the collision avoidance system.</li>
+                        </ul>
+
+                        <h3>Infrastructure Powered by ROS2</h3>
+                        <p>
+                            As Deptron Robotics, we build our systems on <strong>ROS2 (Robot Operating System
+                                2)</strong>
+                            at industrial standards. Thanks to the real-time data processing capability provided by
+                            ROS2:
+                        </p>
+                        <ol style="color:#ccc; margin-left:1.5rem; margin-bottom:1.5rem; line-height:1.8;">
+                            <li>The robot's position is updated with <strong>centimeter precision</strong>.</li>
+                            <li>Instant decisions are made without data loss or latency.</li>
+                            <li>Multiple robots can use the same map synchronously with fleet management systems.</li>
+                        </ol>
+
+                        <blockquote class="quote">
+                            "Thanks to our SLAM technology, Deptron robots are ready to work out of the box without
+                            requiring extra infrastructure investment (magnetic strips or QR codes)."
+                        </blockquote>
+
+                        <p>
+                            Providing 100% autonomy even in points where GPS cannot reach, this technology increases
+                            efficiency in your warehouse operations while eliminating risks caused by human errors.
+                        </p>
+
+                    </div>
+
+                    <div class="blog-footer">
+                        <a href="contact.html" class="btn btn-primary">Test Our Technology</a>
+                        <a href="blog_en.html" class="btn btn-outline">Back to Blog</a>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-content">
+            <p>&copy; 2024 Deptron Robotics. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

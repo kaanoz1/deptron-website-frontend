@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog & News | Deptron Robotics</title>
+    <meta name="description"
+        content="Deptron Robotics blog page. Autonomous robots, warehouse solutions, ROS2, and industrial technology news.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Orbitron:wght@400;700;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index_en.html" class="logo">
+                <img src="assets/logo.svg" alt="Deptron Logo">
+                Deptron Robotics
+            </a>
+            <ul class="nav-links">
+                <li><a href="index_en.html">HOME</a></li>
+                <li><a href="solutions.html">SOLUTIONS</a></li>
+                <li><a href="services.html">SERVICES</a></li>
+                <li><a href="press.html">PRESS</a></li>
+                <li><a href="blog_en.html" class="active" style="color: #00d4ff;">BLOG</a></li>
+                <li><a href="about.html">ABOUT US</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+                <li class="lang-switch"><a href="blog.html"
+                        style="color: var(--primary-color); font-weight: 700;">TR</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <section class="section page-hero">
+        <div class="container">
+            <h1>Technology Blog</h1>
+            <p style="max-width: 700px; margin: 0 auto; color: #aaa;">
+                Autonomous systems, industrial AI, and the latest developments from Deptron
+            </p>
+        </div>
+    </section>
+
+    <section id="blog-posts" class="section">
+        <div class="container">
+            <div class="blog-grid">
+
+                <article class="blog-card glass-card">
+                    <div class="blog-image">
+                        <img src="assets/blog-1.jpg"
+                            onerror="this.src='https://placehold.co/600x400/1a1a2e/FFF?text=Deptron+Tech'"
+                            alt="ROS2 Technology">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="date">November 29, 2025</span>
+                            <span class="category">Technology</span>
+                        </div>
+                        <h3>ROS2 Revolution in Industrial Robotics</h3>
+                        <p>We examine the security and real-time data processing advantages provided by the Robot
+                            Operating System (ROS2) in industrial automation.</p>
+                        <a href="blog-ros2-revolution.html" class="read-more">Read More &rarr;</a>
+                    </div>
+                </article>
+
+                <article class="blog-card glass-card">
+                    <div class="blog-image">
+                        <img src="assets/blog-2.jpg"
+                            onerror="this.src='https://placehold.co/600x400/1a1a2e/FFF?text=Lidar+SLAM'"
+                            alt="Lidar and SLAM">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="date">November 15, 2025</span>
+                            <span class="category">R&D</span>
+                        </div>
+                        <h3>Precise Mapping with SLAM Algorithms</h3>
+                        <p>How is centimeter-level navigation achieved in warehouse environments without GPS signals?
+                            Deptron's mapping approach.</p>
+                        <a href="blog-slam-mapping.html" class="read-more">Read More &rarr;</a>
+                    </div>
+                </article>
+
+                <article class="blog-card glass-card">
+                    <div class="blog-image">
+                        <img src="assets/blog-3.jpg"
+                            onerror="this.src='https://placehold.co/600x400/1a1a2e/FFF?text=Nova+V1'"
+                            alt="Deptron Nova">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="date">November 01, 2025</span>
+                            <span class="category">Products</span>
+                        </div>
+                        <h3>Meet Nova: The Warehouse Assistant of the Future</h3>
+                        <p>With its high load capacity and modular structure, Nova aims to increase warehouse efficiency
+                            by 40%. First prototype test results.</p>
+                        <a href="blog-nova-intro.html" class="read-more">Read More &rarr;</a>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-content">
+            <p>&copy; 2024 Deptron Robotics. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Solutions | Deptron Robotics</title>
+    <meta name="description"
+        content="Deptron Robotics autonomous mobile robots (AMR), fleet management software, and AI-powered logistics solutions.">
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Orbitron:wght@400;700;900&display=swap"
+        rel="stylesheet">
+
+    <style>
+        /* --- Page Specific Styles --- */
+
+        .page-hero {
+            padding-top: 120px;
+            padding-bottom: 60px;
+            text-align: center;
+            background: radial-gradient(circle at center, rgba(0, 212, 255, 0.05) 0%, transparent 70%);
+        }
+
+        .page-hero h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 3rem;
+            margin-bottom: 20px;
+            background: linear-gradient(90deg, #fff, #00d4ff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Zig-Zag Content Structure */
+        .solution-row {
+            display: flex;
+            align-items: stretch;
+            justify-content: space-between;
+            gap: 30px;
+            margin-bottom: 100px;
+        }
+
+        /* Reverse even rows */
+        .solution-row:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        /* Text Box Settings */
+        .solution-text {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        /* Visual Box Settings */
+        .solution-visual {
+            flex: 1;
+            position: relative;
+            background-color: #fff;
+            border-radius: 12px;
+            padding: 0 !important;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        /* Image Settings */
+        .solution-visual img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            border-radius: 12px;
+            margin: 0;
+        }
+
+        .solution-text h2 {
+            font-family: 'Orbitron', sans-serif;
+            color: #fff;
+            font-size: 2rem;
+            margin-bottom: 20px;
+            border-left: 4px solid #00d4ff;
+            padding-left: 20px;
+        }
+
+        .solution-text p {
+            color: #ccc;
+            line-height: 1.7;
+            font-size: 1rem;
+            margin-bottom: 20px;
+        }
+
+        /* --- LOGO SLIDER (References) --- */
+        .references-section {
+            padding: 60px 0;
+            background-color: #050505;
+            overflow: hidden;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .references-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .references-header h3 {
+            font-family: 'Orbitron';
+            color: #fff;
+            opacity: 0.7;
+            letter-spacing: 2px;
+        }
+
+        .slider {
+            width: 100%;
+            height: 140px;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+        }
+
+        .slide-track {
+            display: flex;
+            width: calc(250px * 12);
+            animation: scroll 20s linear infinite;
+        }
+
+        .slide {
+            width: 250px;
+            height: 100px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 0 20px;
+            box-sizing: border-box;
+        }
+
+        .slide:hover {
+            filter: drop-shadow(0 0 10px #00d4ff);
+            cursor: pointer;
+        }
+
+        .slide img {
+            max-width: 140px;
+            max-height: 80px;
+            margin-bottom: 15px;
+            filter: grayscale(100%) brightness(200%);
+            transition: all 0.3s ease;
+            opacity: 0.7;
+        }
+
+        .slide:hover img {
+            filter: grayscale(0%) brightness(100%);
+            opacity: 1;
+        }
+
+        .slide span {
+            font-family: 'Inter';
+            font-size: 0.9rem;
+            color: #fff;
+            font-weight: 600;
+            opacity: 0.8;
+        }
+
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(calc(-250px * 6));
+            }
+        }
+
+        /* Mobile Settings */
+        @media (max-width: 900px) {
+
+            .solution-row,
+            .solution-row:nth-child(even) {
+                flex-direction: column;
+                height: auto;
+            }
+
+            .solution-visual {
+                width: 100%;
+                min-height: 300px;
+            }
+        }
+
+        .solution-text h2 {
+            border-left: none;
+            border-bottom: 4px solid #00d4ff;
+            padding-left: 0;
+            padding-bottom: 10px;
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index_en.html" class="logo">
+                <img src="assets/logo.svg" alt="Deptron Logo">
+                Deptron Robotics
+            </a>
+            <ul class="nav-links">
+                <li><a href="index_en.html">HOME</a></li>
+                <li><a href="solutions.html" class="active" style="color: #00d4ff;">SOLUTIONS</a></li>
+                <li><a href="services.html">SERVICES</a></li>
+                <li><a href="press.html">PRESS</a></li>
+                <li><a href="blog_en.html">BLOG</a></li>
+                <li><a href="about.html">ABOUT US</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+                <li class="lang-switch"><a href="cozumler.html"
+                        style="color: var(--primary-color); font-weight: 700;">TR</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <section class="section page-hero">
+        <div class="container">
+            <h1>End-to-End Warehouse Automation</h1>
+            <p style="max-width: 700px; margin: 0 auto; color: #aaa;">
+                Perfect harmony of hardware, software, and artificial intelligence. Make your warehouses smart, increase
+                your efficiency by 35%.
+            </p>
+        </div>
+    </section>
+
+    <section class="section" style="padding-top: 20px;">
+        <div class="container">
+
+            <div class="solution-row">
+                <div class="solution-text glass-card" style="padding: 40px;">
+                    <h2>Autonomous Mobile Robot (AMR)</h2>
+                    <p>
+                        Deptron Nova series is designed for heavy industrial conditions with a <strong>payload capacity
+                            up to 1500 kg</strong>.
+                    </p>
+                    <p>
+                        It maps the environment in real-time (SLAM) thanks to LiDAR sensors and advanced cameras.
+                        It moves freely without needing lines or magnetic tape.
+                    </p>
+                    <ul style="color: #a0a0a0; list-style: none; padding: 0;">
+                        <li><i class="fas fa-check" style="color:#00d4ff; margin-right:10px;"></i> Fully Autonomous
+                            Navigation
+                        </li>
+                        <li><i class="fas fa-check" style="color:#00d4ff; margin-right:10px;"></i> Safe Collision
+                            Avoidance</li>
+                        <li><i class="fas fa-check" style="color:#00d4ff; margin-right:10px;"></i> Modular
+                            Superstructure Design</li>
+                    </ul>
+                </div>
+                <div class="solution-visual">
+                    <img src="assets/nova.jpeg" alt="Deptron Autonomous Robot">
+                </div>
+            </div>
+
+            <div class="solution-row">
+                <div class="solution-text glass-card" style="padding: 40px;">
+                    <h2>Voice Assistant & AI</h2>
+                    <p>
+                        Our robots don't just move, they listen to you. Thanks to our <strong>voice assistant
+                            technology</strong>, operators can give commands in natural language instead of complex
+                        tablet screens.
+                    </p>
+                    <p>
+                        Our ROS2-based infrastructure and AI algorithms prevent traffic congestion and instantly
+                        calculate the most efficient route.
+                    </p>
+                    <ul style="color: #a0a0a0; list-style: none; padding: 0;">
+                        <li><i class="fas fa-check" style="color:#00d4ff; margin-right:10px;"></i> Turkish Voice Command
+                            Support</li>
+                        <li><i class="fas fa-check" style="color:#00d4ff; margin-right:10px;"></i> Dynamic Route
+                            Optimization</li>
+                        <li><i class="fas fa-check" style="color:#00d4ff; margin-right:10px;"></i> WMS/ERP Integration
+                        </li>
+                    </ul>
+                </div>
+                <div class="solution-visual">
+                    <img src="assets/karekuri.jpg" alt="Karekuri System and AI">
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="references-section">
+        <div class="container">
+            <div class="references-header">
+                <h3>REFERENCES & COLLABORATIONS</h3>
+            </div>
+
+            <div class="slider">
+                <div class="slide-track">
+
+                    <div class="slide">
+                        <img src="assets/ytu_logo.png" alt="YTU">
+                        <span>Yildiz Technical University</span>
+                    </div>
+                    <div class="slide"><img src="assets/sick_logo.png" alt="Sick"><span>Sensor Intelligence</span></div>
+                    <div class="slide">
+                        <img src="assets/eclipse_foundation_logo.png" alt="Eclipse">
+                        <span>Eclipse</span>
+                    </div>
+
+                    <div class="slide">
+                        <img src="assets/ytu_logo.png" alt="YTU">
+                        <span>Yildiz Technical University</span>
+                    </div>
+                    <div class="slide"><img src="assets/sick_logo.png" alt="Sick"><span>Sensor Intelligence</span></div>
+                    <div class="slide">
+                        <img src="assets/eclipse_foundation_logo.png" alt="Eclipse">
+                        <span>Eclipse</span>
+                    </div>
+                    <div class="slide">
+                        <img src="assets/ytu_logo.png" alt="YTU">
+                        <span>Yildiz Technical University</span>
+                    </div>
+                    <div class="slide"><img src="assets/sick_logo.png" alt="Sick"><span>Sensor Intelligence</span></div>
+                    <div class="slide">
+                        <img src="assets/eclipse_foundation_logo.png" alt="Eclipse">
+                        <span>Eclipse</span>
+                    </div>
+
+                    <div class="slide">
+                        <img src="assets/ytu_logo.png" alt="YTU">
+                        <span>Yildiz Technical University</span>
+                    </div>
+                    <div class="slide"><img src="assets/sick_logo.png" alt="Sick"><span>Sensor Intelligence</span></div>
+                    <div class="slide">
+                        <img src="assets/eclipse_foundation_logo.png" alt="Eclipse">
+                        <span>Eclipse</span>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-content" style="text-align: center; padding: 40px;">
+            <p>&copy; 2025 Deptron Robotics. Designing the future.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

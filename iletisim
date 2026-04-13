@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İletişim | Deptron Robotics</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Orbitron:wght@400;700;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="assets/logo.svg" alt="Deptron Logo">
+                Deptron Robotics
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">ANA SAYFA</a></li>
+                <li><a href="cozumler.html">ÇÖZÜMLER</a></li>
+                <li><a href="hizmetlerimiz.html">HİZMETLERİMİZ</a></li>
+                <li><a href="basinda-biz.html">BASINDA BİZ</a></li>
+                <li><a href="blog.html">BLOG</a></li>
+                <li><a href="hakkimizda.html">HAKKIMIZDA</a></li>
+                <li><a href="iletisim.html" style="color: var(--primary-color);">İLETİŞİM</a></li>
+                <li class="lang-switch"><a href="#" style="font-weight: 700;">EN</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="section" style="padding-top: 150px;">
+        <div class="container">
+            <h2 class="section-title">Bize Ulaşın</h2>
+
+            <div class="contact-page-grid">
+
+                <div class="glass-card contact-form-wrapper">
+                    <h3 style="margin-bottom: 20px; color: #fff;">Mesaj Gönderin</h3>
+                    <form action="#">
+                        <div class="form-group">
+                            <label>Adınız Soyadınız</label>
+                            <input type="text" placeholder="Adınız">
+                        </div>
+                        <div class="form-group">
+                            <label>E-posta Adresi</label>
+                            <input type="email" placeholder="ornek@sirket.com">
+                        </div>
+                        <div class="form-group">
+                            <label>Konu</label>
+                            <input type="text" placeholder="Proje / İş Birliği / Diğer">
+                        </div>
+                        <div class="form-group">
+                            <label>Mesajınız</label>
+                            <textarea rows="5" placeholder="Size nasıl yardımcı olabiliriz?"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">GÖNDER</button>
+                    </form>
+                </div>
+
+                <div class="contact-info-wrapper">
+                    <div class="glass-card info-box">
+                        <h3>Merkez Ofis</h3>
+                        <p>Yıldız Teknik Üniversitesi Teknopark<br>Davutpaşa Kampüsü, İstanbul</p>
+                        <br>
+                        <h3>Doğrudan İletişim</h3>
+                        <p><a href="mailto:info@deptronrobotics.com"
+                                style="color: var(--primary-color);">info@deptronrobotics.com</a></p>
+                        <p>+90 538 463 41 29</p>
+                    </div>
+
+                    <div class="map-container glass-card" style="margin-top: 20px; padding: 10px; height: 300px;">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3011.650490016335!2d28.887030376442655!3d41.02235557134888!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cabb7e4d86895b%3A0x9597143922627068!2zWcSxbZLFsXogVGVrbmlrIMOcnml2ZXJzaXRlc2kgRGF2dXRwYcWfYSBLYW1ww7xzw7w!5e0!3m2!1str!2str!4v1700000000000!5m2!1str!2str"
+                            width="100%" height="100%" style="border:0; border-radius: 10px;" allowfullscreen=""
+                            loading="lazy"></iframe>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-content">
+            <p>&copy; 2024 Deptron Robotics. Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

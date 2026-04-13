@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hizmetlerimiz | Deptron Robotics</title>
+    <meta name="description"
+        content="Deptron Robotics hizmetleri: Otonom depo robotları, sesli asistan teknolojisi, kiralama modelleri ve teknik servis çözümleri.">
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Orbitron:wght@400;700;900&display=swap"
+        rel="stylesheet">
+
+    <style>
+        /* Bu sayfaya özel stiller */
+
+        /* Hero'yu biraz daha kompakt yapalım alt sayfalar için */
+        .page-hero {
+            padding-top: 120px;
+            padding-bottom: 60px;
+            text-align: center;
+        }
+
+        .page-hero h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 3rem;
+            margin-bottom: 20px;
+            background: linear-gradient(90deg, #fff, var(--primary-color, #00d4ff));
+            /* Fallback renk eklendi */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .services-grid {
+            display: grid;
+
+            /* ESKİ HALİ: grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
+
+            /* YENİ HALİ: Ekrana sığsa da sığmasa da zorla 4 parçaya böl */
+            grid-template-columns: repeat(4, 1fr);
+
+            /* Kartlar 4 tane olunca araları çok açık kalmasın diye boşluğu azalttım */
+            gap: 15px;
+            margin-top: 40px;
+        }
+
+        /* ÖNEMLİ: Ekran küçülünce (Laptop ve altı) sıkışmaması için 
+           tekrar 2'li veya 1'li düzene geçmesini sağlıyoruz */
+        @media (max-width: 1200px) {
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+                /* Tablette 2 üstte 2 altta */
+            }
+        }
+
+        @media (max-width: 768px) {
+            .services-grid {
+                grid-template-columns: 1fr;
+                /* Mobilde hepsi alt alta */
+            }
+        }
+
+        /* Hizmet Kartı Özelleştirmesi */
+        .service-card {
+            padding: 40px 30px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0, 212, 255, 0.1);
+            /* Hafif mavi parlama */
+            border-color: rgba(0, 212, 255, 0.3);
+        }
+
+        .service-icon {
+            font-size: 2.5rem;
+            color: #00d4ff;
+            /* Neon Mavi */
+            margin-bottom: 25px;
+        }
+
+        .service-card h3 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #fff;
+        }
+
+        .service-card p {
+            font-family: 'Inter', sans-serif;
+            color: #ccc;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+        }
+
+        /* Liste Stili */
+        .feature-list {
+            list-style: none;
+            padding: 0;
+            margin-top: auto;
+            /* Listeyi alta iter */
+        }
+
+        .feature-list li {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            color: #a0a0a0;
+            font-size: 0.9rem;
+        }
+
+        .feature-list li i {
+            color: #00d4ff;
+            margin-right: 10px;
+            font-size: 0.8rem;
+        }
+
+        /* CTA Butonu */
+        .cta-section {
+            text-align: center;
+            margin-top: 80px;
+            margin-bottom: 40px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="assets/logo.svg" alt="Deptron Logo">
+                Deptron Robotics
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">ANA SAYFA</a></li>
+                <li><a href="cozumler.html">ÇÖZÜMLER</a></li>
+                <li><a href="hizmetlerimiz.html" class="active" style="color: #00d4ff;">HİZMETLERİMİZ</a></li>
+                <li><a href="basinda-biz.html">BASINDA BİZ</a></li>
+                <li><a href="blog.html">BLOG</a></li>
+                <li><a href="hakkimizda.html">HAKKIMIZDA</a></li>
+                <li><a href="iletisim.html">İLETİŞİM</a></li>
+                <li class="lang-switch"><a href="services.html"
+                        style="color: var(--primary-color); font-weight: 700;">EN</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <section class="section page-hero">
+        <div class="container">
+            <h1>Hizmetlerimiz</h1>
+            <p style="max-width: 700px; margin: 0 auto; color: #aaa;">
+                Depo operasyonlarınızda %35'e varan verimlilik artışı sağlayan, yerli üretim otonom çözümler ve esnek iş
+                modelleri.
+            </p>
+        </div>
+    </section>
+
+    <section class="section" style="padding-top: 0;">
+        <div class="container">
+            <div class="services-grid">
+
+                <div class="service-card glass-card">
+                    <div class="service-icon"><i class="fas fa-robot"></i></div>
+                    <h3>Otonom Depo Robotu</h3>
+                    <p>Ağır yüklerinizi hafifletin. Depo ve üretim tesisleri için geliştirilen, yüksek kapasiteli ve
+                        modüler otonom mobil robotlar (AMR).</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> 0 - 1500 kg Taşıma Kapasitesi</li>
+                        <li><i class="fas fa-check"></i> Yerli Üretim Donanım</li>
+                        <li><i class="fas fa-check"></i> ROS2 Tabanlı Otonomi</li>
+                    </ul>
+                </div>
+
+                <div class="service-card glass-card">
+                    <div class="service-icon"><i class="fas fa-microphone-lines"></i></div>
+                    <h3>Sesli Asistan Teknolojisi</h3>
+                    <p>Robotlarınızla konuşun. Rakiplerden ayrışan sesli komut teknolojimiz ile operatörleriniz karmaşık
+                        paneller yerine sesiyle iş emri verebilir.</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> Sesli Süreç Yönetimi</li>
+                        <li><i class="fas fa-check"></i> Operasyonel Hata Önleme</li>
+                        <li><i class="fas fa-check"></i> Hızlı Eğitim ve Adaptasyon</li>
+                    </ul>
+                </div>
+
+                <div class="service-card glass-card">
+                    <div class="service-icon"><i class="fas fa-file-contract"></i></div>
+                    <h3>Kiralama & SaaS</h3>
+                    <p>Yüksek yatırım maliyetlerine takılmayın. Robotik filonuzu kiralama veya yıllık abonelik modeliyle
+                        hemen kurun.</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> Düşük İlk Yatırım (CAPEX)</li>
+                        <li><i class="fas fa-check"></i> Yıllık SaaS Abonelikleri</li>
+                        <li><i class="fas fa-check"></i> Esnek Filo Yönetimi</li>
+                    </ul>
+                </div>
+
+                <div class="service-card glass-card">
+                    <div class="service-icon"><i class="fas fa-network-wired"></i></div>
+                    <h3>Entegrasyon & Servis</h3>
+                    <p>Mevcut sisteminizi değiştirmeyin, dönüştürün. ERP ve WMS yazılımlarınızla tam uyumlu çalışıyor,
+                        7/24 destek sunuyoruz.</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> WMS & ERP Uyumluluğu</li>
+                        <li><i class="fas fa-check"></i> Yerinde Teknik Servis</li>
+                        <li><i class="fas fa-check"></i> Uzaktan Filo Takibi</li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="cta-section">
+                <h3 style="font-family: 'Orbitron'; margin-bottom: 20px;">Deponuzu Dönüştürmeye Hazır Mısınız?</h3>
+                <a href="iletisim.html" class="btn btn-primary"
+                    style="padding: 12px 30px; text-decoration: none; display: inline-block; background: #00d4ff; color: #000; font-weight: bold; border-radius: 5px;">Teklif
+                    Alın</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-content" style="text-align: center; padding: 20px;">
+            <p>&copy; 2025 Deptron Robotics. Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

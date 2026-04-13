@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Çözümlerimiz | Deptron Robotics</title>
+    <meta name="description"
+        content="Deptron Robotics otonom taşıma robotları (AMR), filo yönetim yazılımı ve yapay zeka destekli lojistik çözümleri.">
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Orbitron:wght@400;700;900&display=swap"
+        rel="stylesheet">
+
+    <style>
+        /* --- Sayfaya Özel Stiller --- */
+
+        .page-hero {
+            padding-top: 120px;
+            padding-bottom: 60px;
+            text-align: center;
+            background: radial-gradient(circle at center, rgba(0, 212, 255, 0.05) 0%, transparent 70%);
+        }
+
+        .page-hero h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 3rem;
+            margin-bottom: 20px;
+            background: linear-gradient(90deg, #fff, #00d4ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Zig-Zag İçerik Yapısı */
+        .solution-row {
+            display: flex;
+            align-items: stretch;
+            /* Kutuları eşit boya zorlar */
+            justify-content: space-between;
+            gap: 30px;
+            margin-bottom: 100px;
+        }
+
+        /* Çift sayıdaki satırları ters çevir */
+        .solution-row:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        /* Metin Kutusu Ayarları */
+        .solution-text {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        /* Görsel Kutusu Ayarları - DÜZELTİLDİ */
+        .solution-visual {
+            flex: 1;
+            position: relative;
+            background-color: #fff;
+            border-radius: 12px;
+
+            /* DÜZELTME: height: auto kaldırıldı, flex-basis düzenlendi */
+            padding: 0 !important;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        /* Resim Ayarları - DÜZELTİLDİ */
+        .solution-visual img {
+            width: 100%;
+            height: 100%;
+            /* Kutunun boyu neyse o kadar uza */
+            object-fit: cover;
+            /* Resmi kutuya kırparak sığdır */
+            display: block;
+            border-radius: 12px;
+            margin: 0;
+        }
+
+        .solution-text h2 {
+            font-family: 'Orbitron', sans-serif;
+            color: #fff;
+            font-size: 2rem;
+            margin-bottom: 20px;
+            border-left: 4px solid #00d4ff;
+            padding-left: 20px;
+        }
+
+        .solution-text p {
+            color: #ccc;
+            line-height: 1.7;
+            font-size: 1rem;
+            margin-bottom: 20px;
+        }
+
+        /* --- LOGO SLIDER (Referanslar) --- */
+        .references-section {
+            padding: 60px 0;
+            background-color: #050505;
+            overflow: hidden;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .references-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .references-header h3 {
+            font-family: 'Orbitron';
+            color: #fff;
+            opacity: 0.7;
+            letter-spacing: 2px;
+        }
+
+        .slider {
+            width: 100%;
+            height: 140px;
+            /* Yüksekliği biraz artırdım, sıkışık durmasın */
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            /* Dikey ortalama */
+        }
+
+        .slide-track {
+            display: flex;
+            /* HESAPLAMA: 250px (slide genişliği) x 12 (toplam slide sayısı) */
+            width: calc(250px * 12);
+            animation: scroll 20s linear infinite;
+            /* Hızı 20s yaptım, daha sakin akar */
+        }
+
+        .slide {
+            width: 250px;
+            height: 100px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            /* padding ekleyerek logoların birbirine yapışmasını engelliyoruz */
+            padding: 0 20px;
+            box-sizing: border-box;
+        }
+
+        .slide:hover {
+            /* Mavi neon ışıldama */
+            filter: drop-shadow(0 0 10px #00d4ff);
+            cursor: pointer;
+        }
+
+        .slide img {
+            max-width: 140px;
+            /* Logolar biraz daha geniş olabilir */
+            max-height: 80px;
+            margin-bottom: 15px;
+
+            /* Başlangıç Durumu: Siyah beyaz ve hafif parlak (Koyu temada görünmesi için) */
+            filter: grayscale(100%) brightness(200%);
+            transition: all 0.3s ease;
+            opacity: 0.7;
+        }
+
+        .slide:hover img {
+            /* Renkleri geri getir ve tam görünür yap */
+            filter: grayscale(0%) brightness(100%);
+            opacity: 1;
+        }
+
+        .slide span {
+            font-family: 'Inter';
+            font-size: 0.9rem;
+            color: #fff;
+            font-weight: 600;
+            opacity: 0.8;
+        }
+
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                /* Toplam genişliğin YARISI kadar kaydırıyoruz */
+                /* 12 slide var, 6 tanesi geçince başa saracak */
+                transform: translateX(calc(-250px * 6));
+            }
+        }
+
+        /* Mobil Ayarları */
+        @media (max-width: 900px) {
+
+            .solution-row,
+            .solution-row:nth-child(even) {
+                flex-direction: column;
+                height: auto;
+            }
+
+            .solution-visual {
+                width: 100%;
+                min-height: 300px;
+                /* Mobilde resim kaybolmasın diye minimum yükseklik */
+            }
+        }
+
+        .solution-text h2 {
+            border-left: none;
+            border-bottom: 4px solid #00d4ff;
+            padding-left: 0;
+            padding-bottom: 10px;
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="assets/logo.svg" alt="Deptron Logo">
+                Deptron Robotics
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">ANA SAYFA</a></li>
+                <li><a href="cozumler.html" class="active" style="color: #00d4ff;">ÇÖZÜMLER</a></li>
+                <li><a href="hizmetlerimiz.html">HİZMETLERİMİZ</a></li>
+                <li><a href="basinda-biz.html">BASINDA BİZ</a></li>
+                <li><a href="blog.html">BLOG</a></li>
+                <li><a href="hakkimizda.html">HAKKIMIZDA</a></li>
+                <li><a href="iletisim.html">İLETİŞİM</a></li>
+                <li class="lang-switch"><a href="solutions.html"
+                        style="color: var(--primary-color); font-weight: 700;">EN</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <section class="section page-hero">
+        <div class="container">
+            <h1>Uçtan Uca Depo Otomasyonu</h1>
+            <p style="max-width: 700px; margin: 0 auto; color: #aaa;">
+                Donanım, yazılım ve yapay zekanın mükemmel uyumu. Depolarınızı akıllandırın, verimliliğinizi %35
+                artırın.
+            </p>
+        </div>
+    </section>
+
+    <section class="section" style="padding-top: 20px;">
+        <div class="container">
+
+            <div class="solution-row">
+                <div class="solution-text glass-card" style="padding: 40px;">
+                    <h2>Otonom Mobil Robot (AMR)</h2>
+                    <p>
+                        Deptron Nova serisi, <strong>1500 kg'a kadar yük taşıma kapasitesi</strong> ile ağır endüstriyel
+                        koşullar için tasarlanmıştır.
+                    </p>
+                    <p>
+                        LiDAR sensörleri ve gelişmiş kameraları sayesinde ortamı gerçek zamanlı haritalandırır (SLAM).
+                        Çizgi veya manyetik banda ihtiyaç duymadan özgürce hareket eder.
+                    </p>
+                    <ul style="color: #a0a0a0; list-style: none; padding: 0;">
+                        <li><i class="fas fa-check" style="color:#00d4ff; margin-right:10px;"></i> Tam Otonom Navigasyon
+                        </li>
+                        <li><i class="fas fa-check" style="color:#00d4ff; margin-right:10px;"></i> Güvenli Çarpışma
+                            Önleme</li>
+                        <li><i class="fas fa-check" style="color:#00d4ff; margin-right:10px;"></i> Modüler Üst Yapı
+                            Tasarımı</li>
+                    </ul>
+                </div>
+                <div class="solution-visual">
+                    <img src="assets/nova.jpeg" alt="Deptron Otonom Robot">
+                </div>
+            </div>
+
+            <div class="solution-row">
+                <div class="solution-text glass-card" style="padding: 40px;">
+                    <h2>Sesli Asistan & Yapay Zeka</h2>
+                    <p>
+                        Robotlarımız sadece hareket etmez, sizi dinler. <strong>Sesli asistan teknolojimiz</strong>
+                        sayesinde operatörler, karmaşık tablet ekranları yerine doğal konuşma diliyle komut verebilir.
+                    </p>
+                    <p>
+                        ROS2 tabanlı altyapımız ve yapay zeka algoritmalarımız, trafik sıkışıklığını önler ve en verimli
+                        rotayı anlık olarak hesaplar.
+                    </p>
+                    <ul style="color: #a0a0a0; list-style: none; padding: 0;">
+                        <li><i class="fas fa-check" style="color:#00d4ff; margin-right:10px;"></i> Türkçe Sesli Komut
+                            Desteği</li>
+                        <li><i class="fas fa-check" style="color:#00d4ff; margin-right:10px;"></i> Dinamik Rota
+                            Optimizasyonu</li>
+                        <li><i class="fas fa-check" style="color:#00d4ff; margin-right:10px;"></i> WMS/ERP Entegrasyonu
+                        </li>
+                    </ul>
+                </div>
+                <div class="solution-visual">
+                    <img src="assets/karekuri.jpg" alt="Karekuri Sistemi ve Yapay Zeka">
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="references-section">
+        <div class="container">
+            <div class="references-header">
+                <h3>REFERANSLARIMIZ & İŞ BİRLİKLERİMİZ</h3>
+            </div>
+
+            <div class="slider">
+                <div class="slide-track">
+
+                    <div class="slide">
+                        <img src="assets/ytu_logo.png" alt="YTÜ">
+                        <span>Yıldız Teknik Üniversitesi</span>
+                    </div>
+                    <div class="slide"><img src="assets/sick_logo.png" alt="Sick"><span>Sensor Intelligence</span></div>
+                    <div class="slide">
+                        <img src="assets/eclipse_foundation_logo.png" alt="Eclipse">
+                        <span>Eclipse</span>
+                    </div>
+
+                    <div class="slide">
+                        <img src="assets/ytu_logo.png" alt="YTÜ">
+                        <span>Yıldız Teknik Üniversitesi</span>
+                    </div>
+                    <div class="slide"><img src="assets/sick_logo.png" alt="Sick"><span>Sensor Intelligence</span></div>
+                    <div class="slide">
+                        <img src="assets/eclipse_foundation_logo.png" alt="Eclipse">
+                        <span>Eclipse</span>
+                    </div>
+                    <div class="slide">
+                        <img src="assets/ytu_logo.png" alt="YTÜ">
+                        <span>Yıldız Teknik Üniversitesi</span>
+                    </div>
+                    <div class="slide"><img src="assets/sick_logo.png" alt="Sick"><span>Sensor Intelligence</span></div>
+                    <div class="slide">
+                        <img src="assets/eclipse_foundation_logo.png" alt="Eclipse">
+                        <span>Eclipse</span>
+                    </div>
+
+                    <div class="slide">
+                        <img src="assets/ytu_logo.png" alt="YTÜ">
+                        <span>Yıldız Teknik Üniversitesi</span>
+                    </div>
+                    <div class="slide"><img src="assets/sick_logo.png" alt="Sick"><span>Sensor Intelligence</span></div>
+                    <div class="slide">
+                        <img src="assets/eclipse_foundation_logo.png" alt="Eclipse">
+                        <span>Eclipse</span>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-content" style="text-align: center; padding: 40px;">
+            <p>&copy; 2025 Deptron Robotics. Geleceği tasarlıyoruz.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

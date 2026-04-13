@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lidar ve SLAM Teknolojisi | Deptron Robotics</title>
+    <meta name="description"
+        content="Deptron robotlarının gözü ve beyni: Lidar sensörleri ve SLAM algoritmaları ile GPS olmayan ortamlarda santimetre hassasiyetinde navigasyon.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Orbitron:wght@400;700;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="assets/logo.svg" alt="Deptron Logo">
+                Deptron Robotics
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">ANA SAYFA</a></li>
+                <li><a href="cozumler.html">ÇÖZÜMLER</a></li>
+                <li><a href="hizmetlerimiz.html">HİZMETLERİMİZ</a></li>
+                <li><a href="basinda-biz.html">BASINDA BİZ</a></li>
+                <li><a href="blog.html" class="active" style="color: #00d4ff;">BLOG</a></li>
+                <li><a href="hakkimizda.html">HAKKIMIZDA</a></li>
+                <li><a href="iletisim.html">İLETİŞİM</a></li>
+                <li class="lang-switch"><a href="blog-slam-mapping.html"
+                        style="color: var(--primary-color); font-weight: 700;">EN</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <section class="section blog-detail-section">
+        <div class="container">
+            <article class="blog-detail-card glass-card">
+
+                <div class="blog-detail-image">
+                    <img src="assets/blog-2.jpg"
+                        onerror="this.src='https://placehold.co/900x400/1a1a2e/00fff2?text=Lidar+SLAM+Mapping'"
+                        alt="Lidar SLAM Haritalama">
+                </div>
+
+                <div class="blog-detail-content">
+                    <div class="blog-meta">
+                        <span class="date">15 Kasım 2025</span>
+                        <span class="category">Ar-Ge & Teknoloji</span>
+                    </div>
+
+                    <h1 class="entry-title">SLAM Algoritmaları ile Hassas Haritalama</h1>
+
+                    <div class="entry-body">
+                        <p class="lead">
+                            Kapalı depo alanlarında GPS sinyalleri işlevsizdir. Peki, bir robot nerede olduğunu ve
+                            nereye gideceğini nasıl bilir? Cevap: Lidar ve SLAM teknolojisinin mükemmel uyumu.
+                        </p>
+
+                        <h2>Karanlıkta Yön Bulmak: SLAM Nedir?</h2>
+                        <p>
+                            SLAM (Simultaneous Localization and Mapping), yani "Eş Zamanlı Konumlandırma ve Haritalama",
+                            otonom robotların en temel problemine çözüm üretir: <em>"Haritasını bilmediğim bir
+                                ortamdayım, hem haritayı çıkarmalıyım hem de bu harita üzerinde nerede olduğumu
+                                bilmeliyim."</em>
+                        </p>
+                        <p>
+                            Deptron mühendisleri olarak geliştirdiğimiz algoritmalar, robotun bilinmeyen bir ortama
+                            girdiği anda çevresini taramasını ve hafızasında dinamik bir harita oluşturmasını sağlar. Bu
+                            sayede robotlarımız, daha önce hiç görmedikleri bir depoda bile dakikalar içinde otonom
+                            hareket etmeye başlar.
+                        </p>
+
+                        <h3>Lidar: Robotun Gözleri</h3>
+                        <p>
+                            Bu haritalamayı yapmak için robotun çevresini "görmesi" gerekir. Burada devreye
+                            <strong>Lidar (Light Detection and Ranging)</strong> sensörleri girer.
+                        </p>
+                        <ul class="feature-list">
+                            <li><strong>Lazer Darbeleri:</strong> Lidar, saniyede binlerce lazer darbesi gönderir ve bu
+                                ışığın nesnelere çarpıp geri dönme süresini ölçer.</li>
+                            <li><strong>Nokta Bulutu (Point Cloud):</strong> Bu ölçümler birleşerek ortamın 3 boyutlu,
+                                detaylı bir "nokta bulutu" haritasını oluşturur.</li>
+                            <li><strong>Dinamik Algılama:</strong> Lidar sensörlerimiz, hareket eden insanları veya
+                                diğer forkliftleri anlık olarak algılayarak çarpışma önleme sistemini tetikler.</li>
+                        </ul>
+
+                        <h3>ROS2 ile Güçlendirilmiş Altyapı</h3>
+                        <p>
+                            Deptron Robotics olarak sistemlerimizi endüstriyel standartlardaki <strong>ROS2 (Robot
+                                Operating System 2)</strong> üzerine inşa ediyoruz. ROS2'nin sağladığı gerçek
+                            zamanlı veri işleme yeteneği sayesinde:
+                        </p>
+                        <ol style="color:#ccc; margin-left:1.5rem; margin-bottom:1.5rem; line-height:1.8;">
+                            <li>Robotun konumu <strong>santimetre hassasiyetinde</strong> güncellenir.</li>
+                            <li>Veri kaybı veya gecikme (latency) olmadan anlık karar verilir.</li>
+                            <li>Filo yönetim sistemleri ile birden fazla robot aynı haritayı senkronize olarak
+                                kullanabilir.</li>
+                        </ol>
+
+                        <blockquote class="quote">
+                            "SLAM teknolojimiz sayesinde Deptron robotları, ekstra bir altyapı yatırımı (manyetik
+                            şeritler veya QR kodlar) gerektirmeden, kutudan çıktığı gibi çalışmaya hazırdır."
+                        </blockquote>
+
+                        <p>
+                            GPS'in ulaşamadığı noktalarda bile %100 otonomi sağlayan bu teknolojimiz, depo
+                            operasyonlarınızda verimliliği artırırken insan hatalarından kaynaklı riskleri
+                            ortadan kaldırır.
+                        </p>
+
+                    </div>
+
+                    <div class="blog-footer">
+                        <a href="iletisim.html" class="btn btn-primary">Teknolojimizi Test Edin</a>
+                        <a href="blog.html" class="btn btn-outline">Blog'a Dön</a>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-content">
+            <p>&copy; 2024 Deptron Robotics. Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog & Haberler | Deptron Robotics</title>
+    <meta name="description"
+        content="Deptron Robotics blog sayfası. Otonom robotlar, depo çözümleri, ROS2 ve endüstriyel teknoloji haberleri.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Orbitron:wght@400;700;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="assets/logo.svg" alt="Deptron Logo">
+                Deptron Robotics
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">ANA SAYFA</a></li>
+                <li><a href="cozumler.html">ÇÖZÜMLER</a></li>
+                <li><a href="hizmetlerimiz.html">HİZMETLERİMİZ</a></li>
+                <li><a href="basinda-biz.html">BASINDA BİZ</a></li>
+                <li><a href="blog.html" class="active" style="color: #00d4ff;">BLOG</a></li>
+                <li><a href="hakkimizda.html">HAKKIMIZDA</a></li>
+                <li><a href="iletisim.html">İLETİŞİM</a></li>
+                <li class="lang-switch"><a href="blog_en.html"
+                        style="color: var(--primary-color); font-weight: 700;">EN</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <section class="section page-hero">
+        <div class="container">
+            <h1>Teknoloji Bloğu</h1>
+            <p style="max-width: 700px; margin: 0 auto; color: #aaa;">
+                Otonom sistemler, endüstriyel yapay zeka ve Deptron'dan en güncel gelişmeler
+            </p>
+        </div>
+    </section>
+
+    <section id="blog-posts" class="section">
+        <div class="container">
+            <div class="blog-grid">
+
+                <article class="blog-card glass-card">
+                    <div class="blog-image">
+                        <img src="assets/blog-1.jpg"
+                            onerror="this.src='https://placehold.co/600x400/1a1a2e/FFF?text=Deptron+Tech'"
+                            alt="ROS2 Teknolojisi">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="date">29 Kasım 2025</span>
+                            <span class="category">Teknoloji</span>
+                        </div>
+                        <h3>Endüstriyel Robotikte ROS2 Devrimi</h3>
+                        <p>Robot İşletim Sistemi'nin (ROS2) endüstriyel otomasyonda sağladığı güvenlik ve gerçek zamanlı
+                            veri işleme avantajlarını inceliyoruz.</p>
+                        <a href="blog-ros2.html" class="read-more">Devamını Oku &rarr;</a>
+                    </div>
+                </article>
+
+                <article class="blog-card glass-card">
+                    <div class="blog-image">
+                        <img src="assets/blog-2.jpg"
+                            onerror="this.src='https://placehold.co/600x400/1a1a2e/FFF?text=Lidar+SLAM'"
+                            alt="Lidar ve SLAM">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="date">15 Kasım 2025</span>
+                            <span class="category">Ar-Ge</span>
+                        </div>
+                        <h3>SLAM Algoritmaları ile Hassas Haritalama</h3>
+                        <p>Depo ortamlarında GPS sinyali olmadan santimetre hassasiyetinde navigasyon nasıl sağlanır?
+                            Deptron'un haritalama yaklaşımı.</p>
+                        <a href="blog-slam.html" class="read-more">Devamını Oku &rarr;</a>
+                    </div>
+                </article>
+
+                <article class="blog-card glass-card">
+                    <div class="blog-image">
+                        <img src="assets/blog-3.jpg"
+                            onerror="this.src='https://placehold.co/600x400/1a1a2e/FFF?text=Nova+V1'"
+                            alt="Deptron Nova">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="date">01 Kasım 2025</span>
+                            <span class="category">Ürünler</span>
+                        </div>
+                        <h3>Geleceğin Depo Asistanı: Nova ile Tanışın</h3>
+                        <p>Yüksek taşıma kapasitesi ve modüler yapısıyla Nova, depo verimliliğini %40 artırmayı
+                            hedefliyor. İlk prototip test sonuçları.</p>
+                        <a href="blog-nova.html" class="read-more">Devamını Oku &rarr;</a>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-content">
+            <p>&copy; 2024 Deptron Robotics. Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
